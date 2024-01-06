@@ -1,0 +1,27 @@
+* {
+    margin: 1em;
+    font-size :1.1em; 
+ }
+
+  th{
+    padding: 5px;
+    text-align: center;
+    border: 1px solid black;
+ }
+td{
+    text-align:center;
+    border: 1px solid black;
+}
+
+.unfold-div .list {
+    display: none;
+  }
+  
+  .unfold-div .pattern:hover {
+    cursor: pointer;
+    background-color: yellow;
+  }
+  
+  .unfold-div .pattern:hover + .list {
+    display: block;
+  }

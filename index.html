@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albion loot calculator</title>
+    <link rel="stylesheet" type="text/css" href="cStyle.css">
+</head>
+<body>
+    <fieldset id="calculator">
+        <legend>calculator</legend>
+        <form >
+          <label for="totalLootValue">total loot value</label>  
+          <input type="number" id="totalLootValue" name="totalLootValue" placeholder="total Loot Value"> 
+          <br>
+          <label for="costOfRepire">cost of repire</label>
+          <input type="number" id="costOfRepire" name="cost of repire" placeholder="cost of repire">
+          <br>
+          <label for="groupSize">group size</label>
+          <input type="number" name="groupize" id="groupSize" placeholder="group size">
+          <br>
+          <button id="btn" >calculate</button>
+        </form>
+    </fieldset>
+    <br>
+    <Section id="patternUsed">
+        <fieldset>
+            <legend>pattern used</legend>
+            <div class="unfold-div">
+                <div class="pattern" onclick="toggleList()">Click to see</div>
+                <ol class="list">
+                   <li>return for repair = cost of repire *0.065 </li>
+                   <li>loot value befor fee = total loot value - cost of repire - return for repair </li>
+                   <li>settlement fee = loot value befor fee * 0.035 </li>
+                   <li>all cost = return for repair + settlement fee </li>
+                   <li>loot value = total loot value - all Cost </li>
+                   <li>other = loot value /group Size </li>
+                   <li>loot for divisive = other + all cost</li>
+               </ol>
+                </div>
+        </fieldset>
+    </Section>
+    <div id="tabele">
+        <table class="data">
+            <tr> 
+                <th>total loot value</th>
+                 <th>all cost</th>
+                  <th>loot for divisive</th>
+                   <th>other </th>
+                </tr>
+            <tr>
+                <td>x</td> 
+                <td>x</td> 
+                <td>x</td>
+                <td>x</td>
+            </tr>
+        </table>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
