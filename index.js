@@ -1,5 +1,3 @@
-
-
 document.getElementById('btn').addEventListener('click', function(event) {
     event.preventDefault(); // prevent form submission
 
@@ -7,24 +5,45 @@ document.getElementById('btn').addEventListener('click', function(event) {
     let totalLootValue = document.getElementById('totalLootValue').value;
     let costOfRepire = document.getElementById('costOfRepire').value;
     let groupSize = document.getElementById('groupSize').value;
+    let takePart = document.getElementById('takePart')
+  
+    let returnForRepair 
+    let lootValueBeforFee 
+    let settlementFee 
+    let allCost 
+    let lootValue 
+    let other  
+    let lootForDivisive 
+
 
     // perform calculations
-   
-    let returnForRepair =costOfRepire *0.065
-    console.log(returnForRepair)
-    let lootValueBeforFee = totalLootValue - costOfRepire - returnForRepair;
-    console.log(lootValueBeforFee)
-    let settlementFee = lootValueBeforFee * 0.035;
-    console.log(settlementFee)
-    let allCost = returnForRepair + settlementFee;
-    console.log(allCost)
-    let lootValue = totalLootValue - allCost;
-    console.log(lootValue)
-    let other = lootValue /groupSize;
-    console.log(other)
-     let lootForDivisive = other +allCost;
-    console.log(lootForDivisive)
-    
+    if(takePart.checked){
+        returnForRepair =costOfRepire / 0.935;
+        lootValueBeforFee = totalLootValue- returnForRepair;
+        settlementFee = lootValueBeforFee * 0.05;
+        allCost = returnForRepair + settlementFee;
+        lootValue = totalLootValue - allCost;
+        other = lootValue /groupSize;
+        lootForDivisive = other +allCost;
+       
+      }
+      else{
+         returnForRepair =costOfRepire / 0.935;
+         lootValueBeforFee = totalLootValue- returnForRepair;
+         settlementFee = lootValueBeforFee * 0.05;
+         allCost = returnForRepair + settlementFee;
+         lootValue = totalLootValue - allCost;
+         other = lootValue /groupSize;
+         lootForDivisive = allCost;
+        }
+        console.log(returnForRepair);
+        console.log(lootValueBeforFee);
+        console.log(settlementFee);
+        console.log(allCost);
+        console.log(lootValue);
+        console.log(other);
+        console.log(lootForDivisive);
+        
     //rounding
 
     totalLootValue = Number(totalLootValue).toFixed(0);
@@ -42,6 +61,7 @@ document.getElementById('btn').addEventListener('click', function(event) {
 });
 
 function toggleList() {
-    var list = document.querySelector('.unfold-div .list');
+    let list = document.querySelector('.unfold-div .list');
     list.style.display = list.style.display === 'none' ? 'block' : 'none';
   }
+

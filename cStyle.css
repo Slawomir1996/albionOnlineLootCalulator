@@ -1,14 +1,29 @@
-* {
+/* * {
     margin: 1em;
     font-size :1.1em; 
  }
-
-  th{
+ body{
+  margin: auto;
+  max-width: 1000px;
+ } */
+/* #calculator{
+  margin: auto;
+  max-width: 1000px;
+}
+ #patternUsed{
+  margin: auto;
+max-width: 1000px;
+ }
+ table{ 
+  margin: auto;
+max-width: 1000px;
+ } */
+  /* th{
     padding: 5px;
     text-align: center;
     border: 1px solid black;
- }
-td{
+ } */
+/* td{
     text-align:center;
     border: 1px solid black;
 }
@@ -24,4 +39,58 @@ td{
   
   .unfold-div .pattern:hover + .list {
     display: block;
+  } */
+  
+body{ margin: 1em;
+  font-family: Courier;
+    }
+   
+   .calculator{ 
+       border-left-width: 2px;
+      border-radius: 5px; margin-top: 10px; margin-bottom:10px;
+   }
+  legend{
+      margin:10px; padding:10px
   }
+  label{
+      display:inline-block; width:250px; margin:10px;
+  }
+  input{
+      margin:10px;
+  }
+  .btn{
+      margin: 10px;
+      
+      border-radius: 4px;
+      padding :12px 4px 12px 4px;
+  }
+  ol{
+      display: block;
+  }
+  li{
+      margin:10px;
+  }
+  
+    th{
+      padding: 5px;
+      text-align: center;
+      border: 1px solid black;
+   }
+  td{
+      text-align:center;
+      border: 1px solid black;
+  }
+  
+  .unfold-div .list {
+      display: none;
+    }
+    
+    .unfold-div .pattern:hover {
+      cursor: pointer;
+      background-color: yellow;
+    }
+    
+    .unfold-div .pattern + .list {
+      display: block;
+    }
+   
